@@ -584,7 +584,7 @@ function doPost(e) {
     const payload = { name, phone, email, goal, score, band, checkedItems: getCheckedItems() };
 
     // 1️⃣ Send to Google Sheets
-    if (APPS_SCRIPT_URL !== 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+    if (APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbwDxeOYokYF3M7FODOTVvlbVtDWiBgT9xZjxCX0wKuHdPRq12Y2yQb6Dyb4FDCHf6Jvmg/exec') {
       try {
         await fetch(APPS_SCRIPT_URL, {
           method: 'POST',
@@ -607,7 +607,7 @@ function doPost(e) {
       `_Submitted via Ronkel Voice Diagnostic Checklist_`
     );
 
-    const waNumber = SALES_WHATSAPP !== 'PASTE_YOUR_WHATSAPP_NUMBER' ? SALES_WHATSAPP : '';
+    const waNumber = SALES_WHATSAPP !== '919820434055' ? SALES_WHATSAPP : '';
 
     // 3️⃣ WhatsApp follow-up link shown to the lead
     const leadWaMsg = encodeURIComponent(
